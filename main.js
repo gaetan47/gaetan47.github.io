@@ -201,13 +201,13 @@ class AppComponent {
         console.log(event);
         event.stopPropagation();
         if (this.meneBleu.length < 4) {
-            this.meneBleu.push({ point: point, top: event.clientY, left: event.clientX });
+            this.meneBleu.push({ point: point, top: event.pageY, left: event.pageX });
         }
     }
     addPointRouge(event, point) {
         event.stopPropagation();
         if (this.meneRouge.length < 4) {
-            this.meneRouge.push({ point: point, top: event.clientY, left: event.clientX });
+            this.meneRouge.push({ point: point, top: event.pageY, left: event.pageX });
         }
     }
     noAction(event) {
